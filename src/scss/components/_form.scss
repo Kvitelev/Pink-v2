@@ -1,0 +1,261 @@
+.form {
+  @include tablet {
+    @include flex;
+    flex-direction: column;
+  }
+}
+
+.form__text {
+  @include tablet {
+    max-width: 400px;
+  }
+  @include desktop {
+    max-width: 770px;
+  }
+}
+
+.form__user {
+  @include tablet {
+    order: -3;
+  }
+}
+
+.form__fieldset-radio {
+  @include tablet {
+    order: -2;
+  }
+}
+
+.form__fieldset--radio {
+  @include desktop {
+    max-width: 430px;
+  }
+}
+
+.form__contact {
+  @include tablet {
+    order: -1;
+  }
+}
+
+.fieldset {
+  background-color: $color-gray;
+  @include tablet {
+    background-color: $color-white;
+  }
+}
+
+.form__fieldset {
+  @include flex;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 50px;
+  }
+  @include tablet {
+    border: 2px solid $color-gray-5;
+    width: 620px;
+  }
+  @include desktop {
+    width: 940px;
+  }
+}
+
+.legend {
+  line-height: 18px;
+}
+
+.form__user-item,
+.form__contact-item {
+  @include mobile-width-only {
+    @include flex;
+    flex-direction: column;
+  }
+}
+
+.form__input--name {
+  @include tablet {
+    width: 500px;
+  }
+  @include desktop {
+    width: 350px;
+  }
+}
+
+.form__name-label {
+  color: $color-red;
+  align-self: flex-start;
+}
+
+.label {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.form__description {
+  max-width: 250px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  left: 50px;
+  margin: 40px 0;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.form__input {
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid $color-gray-5;
+  outline: none;
+  border-radius: 2px;
+  @include tablet {
+    min-height: 37px;
+  }
+}
+
+.form__list {
+  text-align: start;
+}
+
+.form__list--check {
+  @include desktop {
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+  }
+}
+
+.form__contact-list {
+  @include tablet {
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 70px;
+  }
+}
+
+.form__contact-item {
+  @include tablet {
+    @include flex;
+    position: relative;
+    flex-direction: column;
+    width: 400px;
+  }
+}
+
+.legend-contact {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.label-contact {
+  @include tablet {
+    order: 1;
+  }
+}
+
+.form__contact--phone::after,
+.form__contact--email::after {
+  @include tablet {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-gray-5;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.form__contact--phone::after {
+  @include tablet {
+    background-image: url(../img/form-img/phone-icon.svg)
+  }
+}
+
+.form__contact--email::after {
+  @include tablet {
+    background-image: url(../img/form-img/mail-icon.svg)
+  }
+}
+
+.form__fieldset--coment {
+  @include tablet {
+    @include flex-all-center;
+    padding-bottom: 10px;
+  }
+}
+
+.coment {
+  width: 250px;
+  min-height: 197px;
+  border: 2px solid $color-gray-5;
+  padding: 10px;
+  @include tablet {
+    width: 500px;
+  }
+  @include desktop {
+    width: 815px;
+  }
+}
+
+.wrapper-btn {
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    @include flex-all-sb;
+    width: 620px;
+    flex-direction: row;
+  }
+  @include desktop {
+    width: 1200px;
+  }
+}
+
+.form-btn {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 276px;
+  background-color: $color-green;
+  color: $color-white;
+  border-radius: 1px;
+  padding: 15px;
+  &:hover {
+    background-color: $color-dark-green;
+  }
+  &:active {
+    color: rgba($color-white, 0.3);
+    background-color: $color-dark-green;
+  }
+}
+
+.form-btn--disabled {
+  background-color: $color-gray-5;
+}
+
+.mandatory-item {
+  text-transform: uppercase;
+  width: 180px;
+  &::before {
+    content: "*";
+    color: $color-red;
+  }
+  @include desktop {
+    width: 250px;
+  }
+}

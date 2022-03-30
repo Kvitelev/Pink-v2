@@ -1,0 +1,23 @@
+// Базовые подключения
+@import "colors";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы (большие компоненты)
+@import "./components/header";
+@import "./components/advantage";
+@import "./components/reviews";
+@import "./components/price";
+@import "./components/contacts";
+@import "./components/footer";
+@import "./components/form";
+@import "./components/catalog";
+
+// подключения компонентов страницы (маленькие компоненты)
+@import "./components/menu";
+@import "./components/download";
+@import "./components/map";
+@import "./components/checkbox";
+@import "./components/popup";
+@import "./components/filter-photo";

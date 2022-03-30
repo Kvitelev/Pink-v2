@@ -1,0 +1,13 @@
+.map__iframe {
+  border: none;
+  width: 100%;
+  @include mobile-width-only {
+    height: 200px;
+  }
+  @include tablet {
+    height: 374px;
+  }
+  @include desktop {
+    height: 502px;
+  }
+}

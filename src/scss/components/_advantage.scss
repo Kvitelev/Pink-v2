@@ -1,0 +1,137 @@
+.advantage__wrapper {
+  background-color: $color-gray;
+}
+
+.advantage__list {
+  padding-bottom: 350px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url(../img/advantage-img/phone-smail.png);
+  @include tablet {
+    padding: 0;
+    background-size: 268px 547px;
+    background-position: left;
+    min-height: 550px;
+    @include flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    background-image: none;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+  }
+}
+
+.advantage__item {
+  @include bg-cover;
+  background-size: 265px 300px;
+  background-position: top;
+  @include tablet {
+    width: 310px;
+  }
+
+  @include desktop {
+    width: 240px;
+  }
+}
+
+.advantage__item--img-phone-gray {
+  @include desktop {
+    background-image: url(../img/advantage-img/phone-desktop-gray.png);
+  }
+}
+
+.advantage__item--img-phone-pink {
+  @include desktop {
+    background-image: url(../img/advantage-img/phone-desktop-pink.png);
+  }
+}
+
+.advantage__item--img-phone-smile {
+  @include desktop {
+    background-image: url(../img/advantage-img/phone-desktop-smail.png);
+  }
+}
+
+.advantage__wrapper-research {
+  @include mobile-width-only {
+    display:  none;
+  }
+
+  @include desktop {
+    background-color: $color-gray;
+  }
+}
+
+.advantage__wrapper-content {
+  @include tablet {
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 238px 276px;
+    background-image: url(../img/advantage-img/timer.svg);
+  }
+}
+
+.advantage__content {
+  @include tablet {
+    width: 310px;
+    float: right;
+  }
+  @include desktop {
+    width: 534px;
+  }
+}
+
+.advantage__lead {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  @include desktop {
+    padding-top: 350px;
+    font-size: 30px;
+  }
+}
+
+.advantage__lead,
+.advantage__description {
+  line-height: 24px;
+  text-align: center;
+  @include tablet {
+    text-align: start;
+  }
+
+  @include desktop {
+    text-align: center;
+  }
+}
+
+.advantage__lead--big {
+  @include tablet {
+    max-width: 168px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @include desktop {
+    padding: 0;
+    max-width: 300px;
+    line-height: 30px;
+  }
+}
+
+.advantage__description--align {
+  @include desktop {
+    text-align: start;
+  }
+}
+
+.advantage__link {
+  line-height: 24px;
+  text-decoration: underline;
+}

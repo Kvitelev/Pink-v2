@@ -1,0 +1,142 @@
+.main-catalog {
+  @include desktop {
+    font-size: 14px;
+  }
+}
+
+.user-photos {
+  @include flex-all-center;
+  flex-direction: column;
+}
+
+.catalog-description {
+  width: 250px;
+  @include tablet {
+    width: 400px;
+  }
+  @include desktop {
+    width: 450px;
+  }
+}
+
+.user-photos__wrapper {
+  @include flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-photos__full-box {
+  position: relative;
+  &::before {
+    @include flex-all-center;
+    content: "Панорама дня";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-red;
+    width: 140px;
+    height: 36px;
+  }
+  @include tablet {
+    &::before {
+      top: 60px;
+    }
+  }
+}
+
+.full-img {
+  @include tablet {
+    height: 509px;
+  }
+}
+
+.wrapper,
+.wrapper-full {
+  background-color: $color-gray;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.wrapper-full {
+  transform: translateY(-9px);
+  position: relative;
+}
+
+.wrapper {
+  @include tablet {
+    max-width: 300px;
+  }
+}
+
+.user-photos__photo {
+  width: 280px;
+  height: 180px;
+  @include tablet {
+    width: 300px;
+    height: 300px;
+  }
+  @include desktop {
+    height: 400px;
+  }
+}
+
+.wrapper__content {
+  padding: 26px 17px;
+  @include tablet {
+    @include flex;
+    flex-direction: column;
+  }
+}
+
+.wrapper__content-name {
+  @include flex;
+  flex-direction: row;
+  column-gap: 3px;
+}
+
+.user-photos__description--tablet {
+  order: 1;
+}
+
+.wrapper__content-like {
+  @include tablet {
+    @include flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    &--top {
+      justify-content: end;
+      column-gap: 16px;
+      position: absolute;
+      right: 20px;
+    }
+  }
+
+}
+
+.user-photos__name {
+  margin: 0;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.user-photos__info {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.user-photos__info--time {
+  font-weight: 300;
+}
+
+.user-photos__info--like {
+  color: $color-red;
+}
+
+.user-photos__btn-img {
+  width: 13px;
+  height: 12px;
+}

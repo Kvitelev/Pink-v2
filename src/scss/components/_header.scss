@@ -1,0 +1,108 @@
+.header {
+  &__wrapper {
+    background-color: rgba($color-black, 0.3);
+    &--active {
+      @include desktop-width-only {
+        background-color: $color-dark-blue;
+      }
+    }
+  }
+
+  &__flex-desktop {
+    @include desktop {
+      @include flex-all-sb;
+    }
+  }
+
+  &__flex-desktop-only {
+    @include desktop-width-only {
+      @include flex-all-sb;
+    }
+  }
+}
+
+.logo {
+  &:hover {
+    fill: $color-red;
+  }
+
+  &:active {
+    fill: rgba($color-white, 0.3);
+  }
+
+  &-mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-tablet {
+    @include mobile-width-only{
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &-desktop {
+    @include desktop-width-only {
+      display: none;
+    }
+  }
+}
+
+.header_btn {
+  @include desktop {
+    display: none;
+  }
+}
+
+.header__content-main {
+  @include bg-cover;
+  background-image: url(../img/header-img/header-bg-mobile.jpg);
+  background-color: $color-dark-blue;
+  min-height: 465px;
+  @include tablet {
+    background-image: url(../img/header-img/header-bg-tablet.jpg);
+    min-height: 700px;
+  }
+
+  @include desktop {
+    background-image: url(../img/header-img/header-bg-desktop.jpg);
+    min-height: 800px;
+  }
+}
+
+.header__content-secondary {
+  @include flex-all-center;
+  @include bg-cover;
+  background-image: url(../img/header-img/secondary-bg-mobile.jpg);
+  background-color: $color-dark-blue;
+  min-height: 150px;
+  @include tablet {
+    background-image: url(../img/header-img/secondary-bg-tablet.jpg);
+    min-height: 300px;
+  }
+
+  @include desktop {
+    background-image: url(../img/header-img/secondary-bg-desktop.jpg);
+    min-height: 300px;
+  }
+}
+
+.header__slogan {
+  color: $color-white;
+  @include tablet {
+    width: 230px;
+    line-height: 48px;
+  }
+  &--desktop {
+    @include tablet {
+      width: 400px;
+    }
+    @include desktop {
+      width: 750px;
+    }
+  }
+}

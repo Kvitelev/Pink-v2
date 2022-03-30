@@ -1,0 +1,60 @@
+.form__checkbox + label::before,
+.form__radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border: 2px solid $color-gray-5;
+  background-color: $color-white;
+}
+
+.form__checkbox:checked + label::after,
+.form__radio:checked + label::after {
+  content: "";
+  position: absolute;
+}
+
+.form__checkbox + label::before {
+  border-radius: 1px;
+}
+
+.form__radio + label::before {
+  border-radius: 50%;
+}
+
+.form__checkbox:checked + label::after {
+  top: 10px;
+  left: -33px;
+  width: 22px;
+  height: 16px;
+  background: url(../img/form-img/tick.svg);
+  background-repeat: no-repeat;
+}
+
+.form__radio:checked + label::after {
+  top: 12px;
+  left: -30px;
+  width: 15px;
+  height: 15px;
+  background-color: $color-red;
+  border-radius: 50%;
+}
+
+.form__input,
+.form__checkbox,
+.form__radio  {
+  &:hover,
+  &:hover + label::before {
+    border-color: $color-dark-blue;
+  }
+  &:active,
+  &:active + label::before {
+    border-color: $color-red;
+  }
+  &:focus,
+  &:focus + label::before {
+    border-color: $color-red;
+  }
+}
