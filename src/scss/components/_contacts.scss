@@ -1,3 +1,18 @@
+.contacts {
+  padding-top: 50px;
+  margin-bottom: 70px;
+}
+
+.contacts__sloagan {
+  margin-bottom: 45px;
+  @include tablet {
+    line-height: 54px;
+  }
+  @include desktop {
+    line-height: 68px;
+  }
+}
+
 .contacts__wrapper-flex {
   @include tablet {
     @include flex;
@@ -8,10 +23,7 @@
 }
 
 .contacts__wrapper-content {
-  // margin-bottom: 30px;
-  // &:last-child {
-  //   margin-bottom: 70px;
-  // }
+  margin-bottom: 30px;
   @include desktop {
     &:nth-child(2) {
       order: 1;

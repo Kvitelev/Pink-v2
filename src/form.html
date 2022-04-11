@@ -43,8 +43,7 @@
               <path d="M10.7851 33.6407C10.0561 33.6355 9.35868 33.3471 8.84503 32.8384C8.33138 32.3298 8.04314 31.6421 8.04316 30.9253C8.04316 31.6438 7.75354 32.333 7.23772 32.8419C6.7219 33.3508 6.02194 33.6381 5.29114 33.6407C6.02194 33.6433 6.7219 33.9305 7.23772 34.4395C7.75354 34.9484 8.04316 35.6376 8.04316 36.356C8.04314 35.6393 8.33138 34.9516 8.84503 34.4429C9.35868 33.9343 10.0561 33.6459 10.7851 33.6407V33.6407Z" fill="#D22856"/>
             </svg>
           </a>
-          <button class="header_btn" aria-label="Открыть меню"></button>
-          <!-- <button class="header_btn" aria-label="Закрыть меню"></button> -->
+          <button class="header_btn header_btn--open btn-reset" aria-label="Открыть меню"></button>
         </div>
 
         <nav class="menu">
@@ -76,7 +75,8 @@
 
     <main class="main">
       <p class="container form__text centered">
-        Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+        Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="form__text--tablet">Пожалуйста, заполните форму ниже:</span>
       </p>
       <form class="form centered" action="https://echo.htmlacademy.ru" method="post" target="_blank">
         <div class="container form__user">
@@ -96,7 +96,7 @@
           </ul>
         </div>
 
-        <div class="fieldset">
+        <div class="fieldset form-checkbox">
           <fieldset class="form__fieldset container">
             <legend class="form__name-label legend">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__list form__list--check list-reset">
@@ -137,8 +137,8 @@
         </div>
 
         <div class="container form__contact">
-          <fieldset class="form__fieldset">
-            <legend class="form__name-label legend-contact">контактная информация</legend>
+          <fieldset class="form__fieldset form__fieldset-contact">
+            <legend class="form__name-label legend-contact legend">контактная информация</legend>
             <ul class="form__contact-list list-reset">
               <li class="form__contact-item form__contact--phone">
                 <label class="form__name-label label label-contact" for="phone">Номер телефона</label>
@@ -172,9 +172,9 @@
           </fieldset>
         </div>
 
-        <div class="container">
+        <div class="container form-coment">
           <fieldset class="form__fieldset form__fieldset--coment">
-            <legend class="form__name-label">Опишите свои имоции</legend>
+            <legend class="form__name-label legend">Опишите свои имоции</legend>
             <label for="coment" aria-label="Оставить коминтарий"></label>
             <textarea class="coment" name="coment" id="coment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>

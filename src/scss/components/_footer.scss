@@ -1,7 +1,22 @@
+.footer {
+  &__page {
+    @include tablet {
+      padding-top: 40px;
+      transform: translateY(-385px);
+
+    }
+  }
+}
+
 .footer__wrapper {
   @include tablet {
     @include flex-all-sb;
   }
+}
+
+.footer__link {
+  display: inline-block;
+  margin-bottom: 40px;
 }
 
 .footer__logo {
@@ -16,6 +31,7 @@
 
 .social,
 .copyright {
+  margin-bottom: 40px;
   @include flex-h-center;
   column-gap: 15px;
 }

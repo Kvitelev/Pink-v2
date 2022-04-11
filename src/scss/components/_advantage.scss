@@ -1,3 +1,17 @@
+.advantage {
+  @include tablet {
+    margin-bottom: 100px;
+  }
+}
+
+.slaogan-wrapper {
+  margin-bottom: 50px;
+}
+
+.advantage__slaogan {
+  padding-top: 20px;
+}
+
 .advantage__wrapper {
   background-color: $color-gray;
 }
@@ -30,6 +44,7 @@
   @include bg-cover;
   background-size: 265px 300px;
   background-position: top;
+  padding-top: 40px;
   @include tablet {
     width: 310px;
   }
@@ -61,9 +76,12 @@
   @include mobile-width-only {
     display:  none;
   }
-
+  @include tablet {
+    padding-top: 50px;
+  }
   @include desktop {
     background-color: $color-gray;
+    padding-bottom: 50px;
   }
 }
 
@@ -74,13 +92,15 @@
     background-position: left;
     background-size: 238px 276px;
     background-image: url(../img/advantage-img/timer.svg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
 .advantage__content {
   @include tablet {
     width: 310px;
-    float: right;
   }
   @include desktop {
     width: 534px;
@@ -88,6 +108,7 @@
 }
 
 .advantage__lead {
+  margin-top: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;

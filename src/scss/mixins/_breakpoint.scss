@@ -10,6 +10,12 @@
   }
 }
 
+@mixin desktop-full {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
+
 @mixin desktop-width-only {
   @media (max-width: 1199px) {
     @content;

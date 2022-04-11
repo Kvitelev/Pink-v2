@@ -2,6 +2,9 @@
   background-color: $color-gray;
   padding-top: 20px;
   padding-bottom: 40px;
+  @include tablet {
+    padding-top: 50px;
+  }
   @include desktop {
     max-width: 940px;
     margin: auto;
@@ -23,6 +26,17 @@
   }
 }
 
+.filter-photo__form {
+  @include tablet {
+    @include flex;
+    flex-direction: column;
+    row-gap: 60px;
+  }
+  @include desktop {
+    row-gap: 130px;
+  }
+}
+
 .filter-photo__img {
   width: 280px;
   height: 374px;
@@ -33,6 +47,7 @@
   border-bottom: 1px solid rgba($color-dark-blue, 0.1);
   margin-bottom: 70px;
   @include tablet {
+    margin-bottom: 30px;
     &::before {
       content: "";
       position: absolute;
@@ -171,6 +186,9 @@
   @include flex-all-center;
   justify-content: space-around;
   margin: 40px 0;
+  @include tablet {
+    margin: 0;
+  }
 }
 
 .filter-photo__icon {

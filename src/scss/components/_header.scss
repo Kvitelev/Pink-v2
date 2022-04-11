@@ -1,10 +1,19 @@
 .header {
+  position: relative;
+  transform: translateY(-75px);
+  @include tablet {
+    transform: translateY(-90px);
+  }
   &__wrapper {
     background-color: rgba($color-black, 0.3);
+    transform: translateY(75px);
     &--active {
       @include desktop-width-only {
         background-color: $color-dark-blue;
       }
+    }
+    @include tablet {
+      transform: translateY(90px);
     }
   }
 
@@ -15,6 +24,8 @@
   }
 
   &__flex-desktop-only {
+    position: relative;
+    padding: 20px 0;
     @include desktop-width-only {
       @include flex-all-sb;
     }
@@ -58,6 +69,68 @@
   }
 }
 
+.header_btn--open {
+  position: relative;
+  width: 50px;
+  height: 3px;
+  margin-bottom: 3px;
+  background-color: $color-white;
+  &::before,
+  &::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: $color-white;
+    position: absolute;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+  }
+  &::after {
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
+  }
+  &:hover,
+  &:hover::before,
+  &:hover::after {
+    background-color: $color-red;
+  }
+  &:active,
+  &:active::before,
+  &:active::after{
+    background-color: rgba($color-red, 0.3);
+  }
+}
+
+.header_btn--close {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  transform: rotate(45deg);
+  background-color: $color-white;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color-white;
+    transform: rotate(90deg);
+  }
+  &:hover,
+  &:hover::before {
+    background-color: $color-red;
+  }
+  &:active,
+  &:active::before{
+    background-color: rgba($color-red, 0.3);
+  }
+  }
+
 .header__content-main {
   @include bg-cover;
   background-image: url(../img/header-img/header-bg-mobile.jpg);
@@ -91,18 +164,43 @@
   }
 }
 
+.header__wrapper-slogan {
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-left: 70px;
+  }
+}
+
 .header__slogan {
   color: $color-white;
+  padding-top: 100px;
   @include tablet {
     width: 230px;
     line-height: 48px;
   }
+  @include desktop {
+    line-height: 68px;
+    margin-left: 30px;
+  }
   &--desktop {
+    padding-bottom: 50px;
     @include tablet {
       width: 400px;
+      line-height: 68px;
     }
     @include desktop {
       width: 750px;
+    }
+  }
+}
+
+.main {
+  transform: translateY(-75px);
+  &__page {
+    @include tablet {
+      transform: translateY(-385px);
     }
   }
 }

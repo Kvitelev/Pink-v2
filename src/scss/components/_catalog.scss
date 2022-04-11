@@ -11,11 +11,24 @@
 
 .catalog-description {
   width: 250px;
+  padding-top: 50px;
+  margin-bottom: 60px;
   @include tablet {
     width: 400px;
+    padding-top: 100px;
+    margin-bottom: 80px;
   }
   @include desktop {
     width: 450px;
+    margin-bottom: 90px;
+  }
+}
+
+.catalog-description-bottom {
+  @include tablet {
+    padding-top: 73px;
+    margin: 0;
+    margin-bottom: 78px;
   }
 }
 
@@ -98,8 +111,13 @@
   column-gap: 3px;
 }
 
-.user-photos__description--tablet {
-  order: 1;
+.user-photos__description {
+  @include tablet {
+    min-height: 60px;
+    &--tablet {
+      order: 1;
+    }
+  }
 }
 
 .wrapper__content-like {
@@ -107,6 +125,7 @@
     @include flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    // align-items: flex-end;
     &--top {
       justify-content: end;
       column-gap: 16px;

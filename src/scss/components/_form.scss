@@ -1,13 +1,57 @@
 .form {
   @include tablet {
-    @include flex;
-    flex-direction: column;
+    display: grid;
+    margin-bottom: 50px;
+  }
+  @include desktop {
+    grid-template-columns: 600px 340px;
+  }
+  @include desktop-full {
+    justify-content: center;
+  }
+}
+
+.form__contact {
+  @include desktop {
+    grid-row: 2;
+  }
+  @include desktop-full {
+    padding: 0;
+  }
+}
+
+.form-checkbox {
+  @include desktop {
+    grid-row: 3;
+    margin: auto;
+    padding: 0 130px;
+  }
+  @include desktop-full {
+    padding: 0;
+  }
+}
+
+.form-coment {
+  @include desktop {
+    grid-row: 4;
+  }
+  @include desktop-full {
+    padding: 0;
   }
 }
 
 .form__text {
+  padding-top: 55px;
+  margin-bottom: 55px;
+  &--tablet {
+    @include mobile-width-only {
+      display: none;
+    }
+  }
   @include tablet {
     max-width: 400px;
+    padding-top: 100px;
+    margin-bottom: 82px;
   }
   @include desktop {
     max-width: 770px;
@@ -15,8 +59,25 @@
 }
 
 .form__user {
+  margin-bottom: 60px;
   @include tablet {
     order: -3;
+  }
+  @include desktop-full {
+    padding: 0;
+    transform: translateX(-90px);
+  }
+}
+
+.form__user-item {
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+  @include desktop {
+    display: flex;
+    margin-bottom: 30px;
   }
 }
 
@@ -29,6 +90,10 @@
 .form__fieldset--radio {
   @include desktop {
     max-width: 430px;
+    margin-left: 50px;
+  }
+  @include desktop-full {
+    margin-left: -80px;
   }
 }
 
@@ -50,13 +115,10 @@
   flex-direction: column;
   border: none;
   padding: 0;
-  margin-bottom: 40px;
-  &:last-child {
-    margin-bottom: 50px;
-  }
   @include tablet {
     border: 2px solid $color-gray-5;
     width: 620px;
+    margin-bottom: 70px;
   }
   @include desktop {
     width: 940px;
@@ -65,6 +127,11 @@
 
 .legend {
   line-height: 18px;
+  padding-top: 40px;
+  text-transform: uppercase;
+  @include tablet {
+    padding: 0 30px;
+  }
 }
 
 .form__user-item,
@@ -75,27 +142,22 @@
   }
 }
 
-.form__input--name {
-  @include tablet {
-    width: 500px;
-  }
-  @include desktop {
-    width: 350px;
-  }
-}
-
 .form__name-label {
   color: $color-red;
   align-self: flex-start;
+  @include desktop {
+    margin-right: 20px;
+  }
 }
 
 .label {
+  margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 10px;
 }
 
 .form__description {
-  max-width: 250px;
+  max-width: 230px;
   position: relative;
   display: block;
   cursor: pointer;
@@ -103,7 +165,7 @@
   left: 50px;
   margin: 40px 0;
   padding-top: 5px;
-  padding-left: 5px;
+  padding-left: 15px;
 }
 
 .form__input {
@@ -117,17 +179,41 @@
   }
 }
 
+.form__input--name {
+  @include tablet {
+    width: 500px;
+  }
+  @include desktop {
+    width: 300px;
+  }
+}
+
 .form__list {
   text-align: start;
 }
 
 .form__list--check {
+  @include tablet {
+    margin-left: 80px;
+  }
   @include desktop {
     @include flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 100px;
+    column-gap: 100px;
+    margin-left: 0;
+    margin: 50px 0;
   }
+}
+
+.form__list--radio {
+  @include tablet {
+    margin-left: 80px;
+  }
+}
+
+.form__fieldset-contact {
+  margin-bottom: 40px;
 }
 
 .form__contact-list {
@@ -135,6 +221,7 @@
     @include flex;
     flex-direction: column;
     align-items: center;
+    margin: 40px 0;
   }
   @include desktop {
     flex-direction: row;
@@ -193,6 +280,7 @@
 }
 
 .form__fieldset--coment {
+  margin-bottom: 50px;
   @include tablet {
     @include flex-all-center;
     padding-bottom: 10px;
@@ -204,11 +292,14 @@
   min-height: 197px;
   border: 2px solid $color-gray-5;
   padding: 10px;
+  margin-top: 20px;
   @include tablet {
     width: 500px;
+    margin: 50px 0;
   }
   @include desktop {
     width: 815px;
+    min-height: 124px;
   }
 }
 
@@ -223,6 +314,10 @@
   }
   @include desktop {
     width: 1200px;
+    grid-row: 5;
+  }
+  @include desktop-full {
+    padding: 0;
   }
 }
 
